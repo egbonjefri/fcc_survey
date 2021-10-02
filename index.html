@@ -1,0 +1,130 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Tinder Survey</title>
+  </head>
+  <body>
+    <section id="title">
+        <h1>Tinder Date Feedback Form</h1>
+        <p id="description"><em>Please help me improve and live my best life</em></p>
+    </section>
+    <form id="survey-form" method="POST">
+        <section class="form-group">
+            <label id="name-label" for="name">Name:</label>
+            <input class="form-cta" type="text" name="name" id="name" placeholder="Enter your response" required/>
+        </section>
+          <section class="form-group">
+            <label id="email-label" for="email">Email:</label>
+            <input type="email" name="email" id="email" class="form-cta" placeholder="Enter your response" 
+            pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/>
+          </section>
+          <section class="form-group">
+            <label id="number-label" for="number">Age(optional)</label>
+            <input class="form-cta" type="number" name="age" id="number" min="18" max="45"  placeholder="Age"/>
+          </section>
+
+          <section class="form-group">
+            <p>Which option best describes your current relationship status?</p>
+            <select id="dropdown" name="status" class="form-cta" required>
+              <option disabled selected value>Select relationship status</option>
+              <option value="single">Single</option>
+              <option value="taken">Taken</option>
+              <option value="searching">Taken, but Searching</option>
+              <option value="complicated">It's Complicated</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+        </section>
+        <section class="form-group">
+            <p>What was your favorite part of our date?</p>
+            <select id="most-like" name="mostLike" class="form-cta" required>
+              <option disabled selected value>Select an option</option>
+              <option value="conversation">Our Conversation</option>
+              <option value="location">Date Location</option>
+              <option value="location">How I made you feel</option>
+              <option value="location">Smell/Outfit</option>
+              <option value="looks">My Smile</option>
+              <option value="conversation">Other</option>
+            </select>
+        </section>
+          <section class="form-group">
+            <p><a>Would you go on a second date?</a></p>
+            <label>
+              <input name="second-date" value="definitely" type="radio" class="input-radio" checked/>Definitely</label>
+            <label>
+              <input name="second-date" value="probably" type="radio" class="input-radio"/>Probably, if it feels right</label>
+            <label>
+                <input name="second-date" value="not-sure"type="radio"class="input-radio"/>Not sure</label>
+                <label>
+                    <input name="second-date" value="never"type="radio"class="input-radio"/>Never, lose my number</label>
+            </section>
+            <section class="form-group">
+            <p><a>Did you think we had a lot in common?</a></p>
+            <label>
+              <input name="common" value="Hell yeah" type="radio" class="input-radio" checked/>Hell Yeah</label>
+            <label>
+              <input name="second-date" value="probably" type="radio" class="input-radio"/>Maybe</label>
+            <label>
+                <input name="second-date" value="no"type="radio"class="input-radio"/>Not at all</label>
+            </section>
+            <section class="form-group">
+            <p><a>Do I look like my pictures?</a></p>
+            <label>
+              <input name="pictures" value="definitely" type="radio" class="input-radio" checked/>Of course, I'd recognize you anywhere</label>
+            <label>
+              <input name="pictures" value="better" type="radio" class="input-radio"/>Even better looking in person</label>
+            <label>
+                <input name="squint" value="not-sure"type="radio"class="input-radio"/>If I squint</label>
+                <label>
+                    <input name="pictures" value="guess"type="radio"class="input-radio"/>I guess so</label>
+                    <label>
+                        <input name="pictures" value="not at all"type="radio"class="input-radio"/>Not at all</label>
+            </section>
+      
+          <section class="form-group">
+            <p><a>What would you like to see improved?(Check all that apply)</a></p>
+            <label>
+                <input name="prefer" value="cheesy-jokes" type="checkbox" class="input-checkbox"/>Cheesy jokes</label>
+            <label>
+              <input name="prefer" value="flirting" type="checkbox" class="input-checkbox"/>More flirting</label>
+            <label>
+                <input name="prefer" value="detail" type="checkbox" class="input-checkbox"/>Attention to detail</label>
+            <label>
+                <input name="prefer" value="banter" type="checkbox" class="input-checkbox"/>Level of banter</label>
+            <label>
+                <input name="prefer" value="chemistry" type="checkbox" class="input-checkbox"/>Chemistry</label>
+            <label>
+                <input name="prefer" value="conversation" type="checkbox" class="input-checkbox"/>Conversations about life</label>
+            <label>
+                <input name="prefer" value="hug" type="checkbox" class="input-checkbox"/>Strength of hug</label>
+            <label>
+                <input name="prefer" value="kiss" type="checkbox" class="input-checkbox"/>Depth of Kiss</label>
+            <label>
+                <input name="prefer" value="nothing" type="checkbox" class="input-checkbox"/>Nothing, I like you just the way you are</label>
+          </section>
+          
+          <section class="form-group">
+              <p>Would you recommend Jeffery to a friend? If yes, please list their number here</p>
+            <label id="phone-label" for="phone">
+            <input class="form-cta" name="phone-number" id="phone" placeholder="Phone Number"/></label>
+          </section>
+          <div>
+            <p>Any additional comments or suggestions on how Jeffery can improve?</p>
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter comments here..."></textarea>
+          </div>
+      
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      
+    </form>
+</body>
+</html>
+
+<!--C:\Users\Jeffery Osagie\Documents\programs\fcc_survey\index.html-->

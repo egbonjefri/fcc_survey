@@ -1,0 +1,96 @@
+html{
+    overflow-x: hidden;
+    background-color: black;
+
+}
+body {
+    font-family: "Rubik";
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    background-image: url("../images/output-onlinepngtools.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+form {
+    background: rgba(198, 198, 199, 0.11);
+    padding: 2.5rem 0.625rem;
+    border-radius: 0.25rem;
+    width: 65%;
+    margin-left: 17%;
+  }
+.form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+  }
+
+  .form-group a{
+      text-decoration: underline;
+      color: rgb(209, 209, 198);
+  }
+  .form-cta {
+    width: 50%;
+    height: 3.0rem;
+    padding: 0.375rem 0.75rem;
+    background-color: white;
+    background-clip: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .form-cta:focus {
+    border-color: #000000;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 10, 20, 0.25);
+  }
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  input,
+  select,
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  button{
+    margin-top: 2rem;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;   
+  }
+
+  .input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 60%;
+  margin-left: 20%;
+  padding: 0.75rem;
+  background: rgba(67, 68, 67, 0.315);
+  color: inherit;
+  border-radius: 2px;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+}
