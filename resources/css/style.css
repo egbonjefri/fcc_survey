@@ -1,6 +1,6 @@
 html{
     overflow-x: hidden;
-    background-color: black;
+    background-color: rgb(32, 32, 32);
 
 }
 body {
@@ -42,7 +42,7 @@ form {
 
   .form-cta:focus {
     border-color: #000000;
-    outline: 0;
+    outline: 1;
     box-shadow: 0 0 0 0.2rem rgba(0, 10, 20, 0.25);
   }
   label {
@@ -93,4 +93,49 @@ form {
   border-radius: 2px;
   border: 1px solid #ced4da;
   cursor: pointer;
+}
+
+
+input:focus:invalid {
+  outline: solid 2px red;
+  border-color: #900;
+  background-color: #FDD;
+}
+.error {
+  width  : 30%;
+  margin-left: 33%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  font-family: Roboto, 'Font Awesome\ 5 Pro', sans-serif;  
+}
+
+.failure-icon {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+
+.success-icon,
+.failure-icon {
+  right: 0;
+  opacity: 0;
+}
+form div i {
+  position: absolute;
+  padding: 10px;
 }

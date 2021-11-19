@@ -3,6 +3,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+    />
     <title>Tinder Survey</title>
   </head>
   <body>
@@ -10,24 +15,36 @@
         <h1>Tinder Date Feedback Form</h1>
         <p id="description"><em>Please help me improve and live my best life</em></p>
     </section>
-    <form id="survey-form" method="POST">
+    <form novalidate id="survey-form" method="POST">
         <section class="form-group">
             <label id="name-label" for="name">Name:</label>
-            <input class="form-cta" type="text" name="name" id="name" placeholder="Enter your response" required/>
+            <input class="form-cta" type="text" name="name" id="name" placeholder="Jane Doe" pattern="^[a-zA-Z ]*$" required/>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+    <i class="far fa-check-circle success-icon"></i>
+            <div class="error" aria-live="polite"></div>
+
         </section>
           <section class="form-group">
+
             <label id="email-label" for="email">Email:</label>
-            <input type="email" name="email" id="email" class="form-cta" placeholder="Enter your response" 
-            pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/>
+            <input type="email" name="email" id="email" class="form-cta" placeholder="abc@example.com"
+            pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" minlength="8" required/>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+                    <div class="error" aria-live="polite"></div>
           </section>
+
           <section class="form-group">
             <label id="number-label" for="number">Age(optional)</label>
-            <input class="form-cta" type="number" name="age" id="number" min="18" max="45"  placeholder="Age"/>
+            <input class="form-cta" type="number" name="age" id="number" min="18" max="45"  placeholder="Enter Your Age"/>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+                    <div class="error" aria-live="polite"></div>
           </section>
 
           <section class="form-group">
             <p>Which option best describes your current relationship status?</p>
-            <select id="dropdown" name="status" class="form-cta" required>
+            <select id="dropdown" name="status" class="form-cta">
               <option disabled selected value>Select relationship status</option>
               <option value="single">Single</option>
               <option value="taken">Taken</option>
@@ -36,10 +53,13 @@
               <option value="preferNo">Prefer not to say</option>
               <option value="other">Other</option>
             </select>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+                    <div class="error" aria-live="polite"></div>
         </section>
         <section class="form-group">
             <p>What was your favorite part of our date?</p>
-            <select id="most-like" name="mostLike" class="form-cta" required>
+            <select id="most-like" name="mostLike" class="form-cta">
               <option disabled selected value>Select an option</option>
               <option value="conversation">Our Conversation</option>
               <option value="location">Date Location</option>
@@ -48,6 +68,9 @@
               <option value="looks">My Smile</option>
               <option value="conversation">Other</option>
             </select>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+                    <div class="error" aria-live="polite"></div>
         </section>
           <section class="form-group">
             <p><a>Would you go on a second date?</a></p>
@@ -59,6 +82,9 @@
                 <input name="second-date" value="not-sure"type="radio"class="input-radio"/>Not sure</label>
                 <label>
                     <input name="second-date" value="never"type="radio"class="input-radio"/>Never, lose my number</label>
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+                            <div class="error" aria-live="polite"></div>
             </section>
             <section class="form-group">
             <p><a>Did you think we had a lot in common?</a></p>
@@ -116,7 +142,7 @@
           </div>
       
           <div class="form-group">
-            <button type="submit" id="submit" class="submit-button">
+            <button type="submit" id="mySubmit" class="submit-button">
               Submit
             </button>
           </div>
@@ -125,6 +151,7 @@
       
     </form>
 </body>
+<script src ='./resources/script/script.js'></script>
 </html>
 
 <!--C:\Users\Jeffery Osagie\Documents\programs\fcc_survey\index.html-->
