@@ -9,6 +9,11 @@ const email = document.getElementById('email');
 const emailError = classes('error')[1];
 const newName = document.getElementById('name');
 const nameError = classes('error')[0];
+
+function validateEmail(email) {
+        var re = /^\S+@\S+\.\S+$/;
+        return re.test(email);
+    }
 function nameFunction(event) {
  
     if (newName.value.trim() === "") {
@@ -62,7 +67,7 @@ function newFunction(event) {
     // Then we prevent the form from being sent by canceling the event
   }
   
-  else if(email.validity.patternMismatch === false) {
+  else if(email.validity.valueMissing || email.validity.typeMismatch || email.validity.tooShort) {
     showError();
     event.preventDefault();
     window.scrollTo(0, document.getElementById('name').offsetTop);
@@ -89,7 +94,14 @@ function showError() {
     successIcon[1].style.opacity = "0";
 
 
-  } else if(email.validity.tooShort) {
+  }
+  else if (email.value.trim() === '') {
+    emailError.textContent = 'Email cannot be blank';
+    failureIcon[1].style.opacity = "1";
+    successIcon[1].style.opacity = "0";
+  }
+  
+  else if(email.validity.tooShort) {
     // If the data is too short,
     // display the following error message.
     emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
